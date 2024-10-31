@@ -1,11 +1,10 @@
 # RBAC-K8s
-
+***
 **Brief description**: Apply RBAC in Kubernetes for multiple users by creating credentials in Kube API server and
 binding roles for them.
-***
-
+___
 ## Table of Contents
-
+***
 ### 1. Generate certificates for user
 
 Kube API server recognizes users by their approved certificates. So, we need to generate certificates for each user to
