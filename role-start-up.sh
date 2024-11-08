@@ -18,7 +18,7 @@ cd /etc/profile.d/ || exit
 cp "$HOME"/user-credential/config-"$selected_user" /home/"$selected_user"/.kube/config-"$selected_user"
 
 ## Get default kubeconfig for logged user
-cat <<EOF > k8s-config-startup.sh
+cat <<EOF > k8s-config-startup-"$selected_user".sh
 #!/bin/bash
 # Save this as /etc/profile.d/k8s-config.sh
 
@@ -38,5 +38,5 @@ setup_k8s_config() {
 # Call the function
 setup_k8s_config
 EOF
-chmod +x k8s-config-startup.sh
+sudo chmod u=rx,go-rwx k8s-config-startup-mrtux.sh
 
